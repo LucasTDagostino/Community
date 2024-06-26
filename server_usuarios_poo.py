@@ -4,6 +4,9 @@ from db_usuarios import create_table
 
 app = Flask(__name__)
 
+@app.route('/welcome', methods=["GET"])
+def welcome():
+    return "Bienvenido a Community. (Se logro acceder a la API)"
 #Crea la ruta para seleccionar y mostrar todos los usuarios
 @app.route('/usuarios', methods=["GET"])
 def get_all_usuarios():
