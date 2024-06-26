@@ -72,6 +72,6 @@ def delete_usuario(email):
 def get_by_email(email):
     usuario = usuarios_controller.get_by_email(email)
     return jsonify(usuario)
-
+create_table()
 if __name__ == '__main__':
     app.run()
