@@ -1,6 +1,6 @@
 from db_usuarios import get_db
 from usuarios_class import Usuario
-from exchange_rate import tipo_de_cambio
+from exchange_rate_api import tipo_de_cambio
 import os
 
 #Definis la funcion para insertar inversores en la tabla "inversores"
