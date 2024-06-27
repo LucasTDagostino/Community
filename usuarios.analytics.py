@@ -26,11 +26,7 @@ capital_chile=0
 
 #Suma la cantidad de inversores argentinos y del resto de latam
 #Suma el capital a invertir segun pais 
-for pais in paises:
-    if pais=="Argentina":
-        inversores_argentinos+=1
-    else:
-        inversores_restodelmundo+=1
+
 for index, row in df_inv.iterrows():
     pais = row['pais']
     capital = row['capital_a_invertir']
