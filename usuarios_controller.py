@@ -51,7 +51,6 @@ def delete_usuario():
         statement="DELETE FROM emprendedores WHERE email = ?" #Statement --> Eliminara de emprendedores la fila de tal mail
     elif usuario_eliminar=="Inversor":
         statement = "DELETE FROM inversores WHERE email = ?" #Statement --> Eliminara de inversores la fila de tal mail
-    email = (input('ingrese el email del usuario a eliminar: ')) #Ingresas el mail del usuario que queres eliminar
     cursor.execute(statement, [email]) #Ejecuta el statement en la base de datos de SQL
     db.commit()
     return True
@@ -135,6 +134,7 @@ while flag:
             result = insert_emprendedor(email, nombre, pais,rubro, descripcion, estado_inversion, instancia, valuacion)
         
     elif opcion == 2:
+        email = (input('ingrese el email del usuario a eliminar: ')) #Ingresas el mail del usuario que queres eliminar
         result = delete_usuario()
         if result == True:
             print('Usuario eliminado.')
